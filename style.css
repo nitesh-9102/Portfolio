@@ -1,0 +1,650 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "neue hass grotesk display";
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+#page-1 {
+  background-color: rgb(44, 44, 44);
+  position: relative;
+  padding: 0 2vw;
+}
+nav {
+  padding: 1vw 2vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-part2 {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+  color: black;
+}
+.nav-part2 h4 {
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 14px;
+  position: relative;
+  font-family: "Zen Dots", sans-serif;
+  transition: all ease 0.3s;
+  overflow: hidden;
+}
+.nav-part2 h4::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #ff690f;
+  left: 0;
+  bottom: -100%;
+  border-radius: 50%;
+  transition: all ease 0.8s;
+}
+.nav-part2 h4:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+.nav-part2 h4 a {
+  font-size: 12px;
+  text-decoration: none;
+  font-family: "Michroma", sans-serif;
+  color: black;
+  z-index: 9;
+  position: relative;
+  position: sticky;
+}
+.nav-part2 h4:hover a {
+  color: white;
+}
+#center {
+  height: 68vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 3vw;
+}
+#left h3 {
+  width: 30vw;
+  font-size: 1.3vw;
+  font-family: "Michroma", sans-serif;
+  color: #c3c3c3;
+}
+#center h1 {
+  font-size: 10vw;
+  font-family: "Albert Sans", sans-serif;
+  line-height: 200px;
+  color: #ffffff;
+  text-align: right;
+}
+
+#hero-shape {
+  position: absolute;
+  width: 46vw;
+  height: 36vw;
+  right: 0;
+  top: 72vh;
+}
+#hero1 {
+  height: 100%;
+  width: 100%;
+  background-color: #fe4f31;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  filter: blur(20px);
+  position: absolute;
+  animation-name: anime3;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#hero2 {
+  height: 30vw;
+  width: 30vw;
+  background: linear-gradient(
+    rgba(232, 71, 12, 0.38),
+    rgba(255, 111, 0, 0.726)
+  );
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  filter: blur(30px);
+  border-radius: 50%;
+  position: absolute;
+  animation-name: anime2;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#hero3 {
+  height: 30vw;
+  width: 30vw;
+  position: absolute;
+  background: linear-gradient(
+    rgba(232, 71, 12, 0.38),
+    rgba(255, 111, 0, 0.726)
+  );
+
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-radius: 50%;
+  filter: blur(30px);
+  animation-name: anime1;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes anime1 {
+  from {
+    transform: translate(-30%, 10%);
+  }
+  to {
+    transform: translate(10%, 10%);
+  }
+}
+@keyframes anime2 {
+  from {
+    transform: translate(15%, 5%);
+  }
+  to {
+    transform: translate(-20%, 20%);
+  }
+}
+@keyframes anime3 {
+  from {
+    transform: translate(5%, 5%);
+  }
+  to {
+    transform: translate(-2%, 2%);
+  }
+}
+
+.container {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#mid {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+#mid img {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 400px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+#mid .left {
+  width: 40%;
+}
+.about-heading h1 {
+  font-family: "Michroma", sans-serif;
+  padding-left: 100px;
+  color: #fff;
+  padding-top: 80px;
+  position: relative;
+}
+.right {
+  width: 60%;
+  height: 100vh;
+  position: relative;
+}
+.right-boxes {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  margin-top: 150px;
+  padding-left: 80px;
+  gap: 30px;
+}
+.box-1 {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+
+  margin-left: 40px;
+  background-color: #2e2c2ca6;
+  height: 60%;
+  width: 20%;
+  border-radius: 10px;
+}
+.box-1 h1 {
+  color: #060606;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 100;
+  font-family: "Michroma", sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.box-1 p {
+  text-align: center;
+  font-family: poppins;
+  font-weight: 100;
+  font-size: 13px;
+}
+.box-1 i {
+  filter: invert();
+  font-size: 25px;
+  padding: 10px 70px;
+}
+
+.about-section p {
+  color: #c3c3c3;
+  font-size: 15px;
+  padding-top: 50px;
+  padding-left: 90px;
+  height: 200px;
+  width: 700px;
+  font-family: poppins;
+}
+
+.connect h4 {
+  top: 0;
+  padding: 10px 90px;
+  border: 1px solid #f5f5f5;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 14px;
+  position: relative;
+  font-family: "Zen Dots", sans-serif;
+  transition: all ease 0.3s;
+  overflow: hidden;
+}
+.nav-part2 h4::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #ff690f;
+  left: 0;
+  bottom: -100%;
+  border-radius: 50%;
+  transition: all ease 0.8s;
+}
+.nav-part2 h4:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+.nav-part2 h4 a {
+  font-size: 12px;
+  text-decoration: none;
+  font-family: "Michroma", sans-serif;
+  color: black;
+  z-index: 9;
+  position: relative;
+  position: sticky;
+}
+.nav-part2 h4:hover a {
+  color: white;
+}
+#page-2 .hero-shape {
+  position: relative;
+}
+#page-2 #hero1 {
+  height: 100%;
+  width: 100%;
+  background-color: #fe4f31;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  filter: blur(20px);
+  position: absolute;
+  animation-name: anime3;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#page-2 #hero2 {
+  height: 30vw;
+  width: 50vw;
+  background: linear-gradient(rgba(232, 71, 12, 0.709), rgb(255, 111, 0));
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  filter: blur(30px);
+  border-radius: 50%;
+  position: absolute;
+  animation-name: anime2;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#page-2 #hero3 {
+  height: 40vw;
+  width: 50vw;
+  position: absolute;
+  background: linear-gradient(
+    rgba(232, 71, 12, 0.38),
+    rgba(255, 111, 0, 0.726)
+  );
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-radius: 50%;
+  filter: blur(30px);
+  animation-name: anime1;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes anime1 {
+  from {
+    transform: translate(-30%, 10%);
+  }
+  to {
+    transform: translate(10%, -10%);
+  }
+}
+@keyframes anime2 {
+  from {
+    transform: translate(15%, -5%);
+  }
+  to {
+    transform: translate(-20%, 20%);
+  }
+}
+@keyframes anime3 {
+  from {
+    transform: translate(5%, -5%);
+  }
+  to {
+    transform: translate(-2%, 2%);
+  }
+}
+
+/*projects*/
+#page-2 {
+  height: 100vh;
+  background-color: rgb(44, 44, 44);
+  border-top: 1px solid black;
+}
+#page-2 h1 {
+  text-align: center;
+  font-family: "Michroma", sans-serif;
+  padding-top: 20px;
+}
+.grid-3-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-right: 800px;
+  position: relative;
+}
+.project-1,
+.project-2 {
+  background-color: #ffffff20;
+  height: 510px;
+  width: 370px;
+  margin-left: 70px;
+  margin-top: 50px;
+  border-top-right-radius: 90px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.project-1 img {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background-color: #ffffff6b;
+  border-top-right-radius: 90px;
+}
+.project-2 img {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  border-top-right-radius: 90px;
+  background-color: #ffffff6b;
+}
+
+.project-box h3 {
+  text-align: center;
+  font-family: "Michroma", sans-serif;
+  padding-top: 10px;
+  padding-top: 20px;
+  color: #fff;
+}
+.project-details li h6 {
+  list-style: none;
+  font-size: 16px;
+  font-family: "Michroma", sans-serif;
+  padding-bottom: 10px;
+  color: #000000;
+  font-weight: 200;
+}
+.project-details li {
+  padding-bottom: 10px;
+  color: #ffffff;
+  font-size: 15px;
+  font-family: "Albert Sans", sans-serif;
+  list-style: none;
+  padding-left: 80px;
+  padding-top: 10px;
+}
+
+/*scroll*/
+.about h4 {
+  border: 1px solid #fe5031a5;
+  color: #000000;
+  text-align: center;
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 10px;
+  position: relative;
+  font-family: "Michroma", sans-serif;
+  transition: all ease 0.3s;
+  overflow: hidden;
+  width: 40%;
+  margin-left: 110px;
+  margin-top: 60px;
+}
+.about h4::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  left: 0;
+  bottom: -100%;
+  border-radius: 50%;
+  transition: all ease 0.4s;
+}
+.about h4:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+.about h4 a {
+  font-size: 10px;
+  text-decoration: none;
+  font-family: "Michroma", sans-serif;
+  color: black;
+  z-index: 9;
+  padding-top: 100px;
+  position: relative;
+  position: sticky;
+}
+.about h4:hover a {
+  color: white;
+}
+#page-3 {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(44, 44, 44);
+  position: relative;
+  padding: 0 1vw;
+}
+.names {
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #c3c3c362;
+  width: 100%;
+}
+.names h1 {
+  font-family: "Michroma", sans-serif;
+}
+.names-slide {
+  display: inline-block;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  animation: 14s slide infinite linear;
+}
+@keyframes slide {
+  from {
+    transform: translateX(1%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  gap: 50px;
+  margin-left: 30px;
+}
+.contact-text h1 {
+  text-align: center;
+  padding-top: 20px;
+  font-family: "Michroma", sans-serif;
+  padding-bottom: 50px;
+  color: #fff;
+}
+.contact h2 {
+  font-family: "Michroma", sans-serif;
+  text-align: center;
+}
+form .input-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.field .item {
+  width: 100%;
+  margin-top: 20px;
+  padding: 18px;
+  background: transparent;
+  border: 1px solid #ffffff8d;
+  outline: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.field .item::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+.field .error-txt {
+  font-size: 10px;
+  padding-top: 8px;
+  color: #ff0505;
+  font-family: "Michroma", sans-serif;
+  display: none;
+}
+.input-box .input-field {
+  width: 50%;
+  font-family: "Michroma", sans-serif;
+}
+
+form .textarea-field .item {
+  resize: none;
+}
+form button {
+  padding: 12px 30px;
+  background: #fe4f31;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 10px #fe4f31;
+  font-family: "Michroma", sans-serif;
+  cursor: pointer;
+  transition: 0.5s;
+}
+form button:hover {
+  box-shadow: none;
+}
+.footer {
+  min-height: 30vh;
+  padding: 3% 5%;
+  text-align: center;
+  position: relative;
+}
+.footer li {
+  list-style: none;
+}
+a {
+  color: #fff;
+}
+.logo a {
+  margin: 22px 0;
+}
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+}
+
+.circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999; /* so that it stays on top of all other elements */
+  animation-name: circleanime;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  filter: blur(3px);
+}
+
+@keyframes circleanime {
+  from {
+    transform: translate(15%, -5%);
+  }
+  to {
+    transform: translate(-20%, 20%);
+  }
+}
