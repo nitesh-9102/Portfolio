@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "neue hass grotesk display";
 }
 html,
 body {
@@ -10,6 +9,9 @@ body {
   width: 100%;
   scroll-behavior: smooth;
   width: 100%;
+}
+::selection {
+  color: #fa2323;
 }
 
 #page-1 {
@@ -31,7 +33,7 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 5vw;
-  color: black;
+  color: rgb(210, 20, 20);
 }
 .nav-part2 h4 {
   padding: 10px 20px;
@@ -40,16 +42,16 @@ nav {
   font-weight: 800;
   font-size: 14px;
   position: relative;
-  font-family: "Zen Dots", sans-serif;
   transition: all ease 0.3s;
   overflow: hidden;
+  cursor: pointer;
 }
 .nav-part2 h4::after {
   content: "";
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: #ff690f;
+
   left: 0;
   bottom: -100%;
   border-radius: 50%;
@@ -63,7 +65,7 @@ nav {
   font-size: 12px;
   text-decoration: none;
   font-family: "Michroma", sans-serif;
-  color: black;
+  color: #fff;
   z-index: 9;
   position: relative;
   position: sticky;
@@ -241,7 +243,7 @@ nav {
   text-align: center;
   font-weight: 100;
   font-family: "Michroma", sans-serif;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 10px;
 }
 .box-1 p {
@@ -253,7 +255,7 @@ nav {
 .box-1 i {
   filter: invert();
   font-size: 25px;
-  padding: 30px 55px;
+  padding: 30px 50px;
 }
 
 .about-section p {
@@ -274,7 +276,7 @@ nav {
   font-weight: 800;
   font-size: 14px;
   position: relative;
-  font-family: "Zen Dots", sans-serif;
+
   transition: all ease 0.3s;
   overflow: hidden;
 }
@@ -283,7 +285,6 @@ nav {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: #ff690f;
   left: 0;
   bottom: -100%;
   border-radius: 50%;
@@ -647,4 +648,19 @@ a {
   to {
     transform: translate(-20%, 20%);
   }
+}
+
+.scramble {
+  padding: 2rem;
+  border: solid 1px #ccc;
+  min-width: 180px;
+  text-align: center;
+  font-family: "Michroma", sans-serif;
+}
+
+.flexed {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  font-family: "Michroma", sans-serif;
 }

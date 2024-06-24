@@ -1,13 +1,20 @@
 const form = document.querySelector("form");
+const fullName = document.getElementById("name");
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+const subject = document.getElementById("subject");
+const mess = document.getElementById("message");
+
 function sendEmail() {
+  const bodyMessage = `Full Name : ${fullName.value}<br> Email:${email.value}<br> Phone number:${phone.value}<br> Message:${mess.value}`;
   Email.send({
     Host: "smtp.elasticemail.com",
     Username: "niteshgunu@gmail.com",
-    Password: "E51D3BE5622DC67E1CD6DDA5EC03BC129C85",
+    Password: "FD8CC1EC715A07F49E5994CCCF5F1CC462A0",
     To: "niteshgunu@gmail.com",
-    From: "niteshgunu@gmail.com",
-    Subject: "This is the subject",
-    Body: "And this is the body",
+    From: document.getElementById("email").value,
+    Subject: subject.value,
+    Body: bodyMessage,
   }).then((message) => alert(message));
 }
 form.addEventListener("submit", (e) => {
@@ -54,3 +61,37 @@ function animateCircles() {
 }
 
 animateCircles();
+
+//scramble
+
+gsap.registerPlugin(ScrambleTextPlugin);
+
+const sT = gsap.utils.toArray(".scramble");
+
+sT.forEach((item) => {
+  let tween = gsap.to(item, {
+    duration: 0.5,
+    scrambleText: { text: "-/#$%>", chars: "<&!§8(x" },
+    paused: true,
+  });
+  item.addEventListener("mouseenter", () => {
+    tween.play();
+  });
+  item.addEventListener("mouseleave", () => {
+    tween.reverse();
+  });
+});
+var fileUrl = "/Users/niteshgunupudi/Desktop/my portfolio/Nitesh Resume.pdf";
+document
+  .getElementById("downloadButton")
+  .addEventListener("click", function () {
+    var fileUrl =
+      "/Users/niteshgunupudi/Desktop/my portfolio/Nitesh Resume.pdf";
+
+    var a = document.createElement("a");
+    a.href = fileUrl;
+    a.download = "Nitesh Resume.pdf";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  });
