@@ -63,8 +63,7 @@ function animateCircles() {
 animateCircles();
 
 //scramble
-
-/*gsap.registerPlugin(ScrambleTextPlugin);
+gsap.registerPlugin(ScrambleTextPlugin);
 
 const sT = gsap.utils.toArray(".scramble");
 
@@ -95,4 +94,3 @@ document
     a.click();
     document.body.removeChild(a);
   });
-*/
