@@ -64,7 +64,7 @@ animateCircles();
 
 //scramble
 gsap.registerPlugin(ScrambleTextPlugin);
-
+import ScrambleText from "scramble-text";
 const sT = gsap.utils.toArray(".scramble");
 
 sT.forEach((item) => {
